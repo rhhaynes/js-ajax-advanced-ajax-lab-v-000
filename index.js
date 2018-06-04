@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function(event) {
+  Handlebars.registerPartial("authorPartial", document.getElementById("author-partial-template").innerHTML)
+});
+
 function showRepositories(event, data) {
   const repos = JSON.parse(this.responseText);
   const src = document.getElementById("repository-template").innerHTML;
